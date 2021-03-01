@@ -5,6 +5,9 @@ public class Application {
         Car blueCar = new Car("Blue");
         blueCar.printModelAndNumberOfCarsMade();
 
+// look at the implementation of this method for error
+//        blueCar.changeModel("Yellow");
+
 //        look at the implementation of this method for error
 //        blueCar.printStatusOfEngine();
 

@@ -1,6 +1,8 @@
+import java.util.Map;
+
 public class Car {
 
-    private static String model = "Ford Fusion Energi";
+    private static final String MODEL = "Ford Fusion Energi";
     private static int numberOfCarsMade;
     private String color;
     private Engine engine = new Engine();
@@ -32,7 +34,7 @@ public class Car {
     }
 
     public void printModelAndNumberOfCarsMade(){
-        System.out.println("model = " + model);  // from  a non static method can access static property
+        System.out.println("model = " + MODEL);  // from  a non static method can access static property
         System.out.println("number Of Cars Made = " + getNumberOfCarsMade());  // from a non static method can access static method
     }
 
@@ -42,8 +44,13 @@ public class Car {
 //    }
 
     public static String getCarModel(){
-        return model;
+        return MODEL;
     }
+
+// Cannot assign a value to final variable 'MODEL'
+//    public void changeModel(String newModel){
+//        MODEL = newModel;
+//    }
 
     public static int getNumberOfCarsMade(){
         return numberOfCarsMade;
