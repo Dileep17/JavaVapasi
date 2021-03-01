@@ -1,22 +1,32 @@
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
 
 public class Application {
 
     public static void main(String[] args) {
+        List<Car> cars = new ArrayList<>();
+
         Car blueCar = new Car("Blue");
-        blueCar.printModelAndNumberOfCarsMade();
-
-//        look at the implementation of this method for error
-//        blueCar.printStatusOfEngine();
-
-        System.out.println("-------------------------------");
+        cars.add(blueCar);
 
         Car redCar = new Car("Red");
-        redCar.printModelAndNumberOfCarsMade();
+        cars.add(redCar);
 
-        System.out.println("-------------------------------");
+        Car GreenCar = new Car("Green");
+        cars.add(GreenCar);
 
-        Car greenCar = new Car("Green");
-        greenCar.printModelAndNumberOfCarsMade();
+        Iterator<Car> carIterator = cars.iterator();
+        while (carIterator.hasNext()){
+            System.out.println(carIterator.next().getColor());
+        }
+
+        // or
+
+        for (Car car : cars){
+            System.out.println(car.getColor());
+        }
+
     }
 
 }
