@@ -1,6 +1,7 @@
 public class Car {
 
     private String color;
+    private Engine engine = new Engine();
 
     public Car(){}
 
@@ -18,5 +19,9 @@ public class Car {
 
     public void paint(String color){
         this.color = color;
+    }
+
+    public Engine getEngine() {
+        return engine;
     }
 }

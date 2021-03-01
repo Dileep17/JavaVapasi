@@ -4,18 +4,20 @@ public class Application {
     public static void main(String[] args) {
         Car blueCar = new Car("Blue");
         System.out.println(blueCar.getColor());
+        blueCar.getEngine().start();
+        blueCar.getEngine().printStatusOfEngine();
 
-        System.out.println("-----------------------");
+        System.out.println("-------------------------------");
 
-        Car oneMoreBlueCar = new Car(blueCar);
-        System.out.println(oneMoreBlueCar.getColor());
-        oneMoreBlueCar.paint("Red");
-        System.out.println(oneMoreBlueCar.getColor());
-
-        System.out.println("-----------------------");
-
-        Car yetToBePaintedCar = new Car();
-        System.out.println(yetToBePaintedCar.getColor());
+        Car redCar = new Car("Red");
+        System.out.println(redCar.getColor());
+        redCar.getEngine().stop();
+        redCar.getEngine().start();
+        redCar.getEngine().printStatusOfEngine();
+        redCar.getEngine().start();
+        redCar.getEngine().stop();
+        redCar.getEngine().stop();
+        redCar.getEngine().printStatusOfEngine();
     }
 
 }
